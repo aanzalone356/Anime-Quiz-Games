@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel = "stylesheet" href = "main.css">
+    <meta charset="utf-8">
+    <title>Anime Knowledge site</title>
+    <script>
+      function go()
+      {
+        window.location.href = "Silhouette.html";
+      }
+      function greet()
+      {
+        document.getElementById('out1').style.visibility = 'visible';
+        document.getElementById('out1').innerHTML = "こんにちは, how are you today? Here to test your Knowledge on Anime? Sweet!<br> The park is still under construction. So be careful while you browse around the games.<br> Anyways I'm off have fun out there and make sure you visit again and see if we add more games.";
+        setTimeout(hid,10000);
+      }
+      function hid()
+      {
+        document.getElementById('out1').style.visibility = 'hidden';
+      }
+    </script>
+  </head>
+  <body onload = 'greet()'>
+    <h1>Home Page</h1>
+    <ul id = 'sideBar'>
+      <li><a href = 'index.html'>Home Page</a></li>
+      <li><a href = 'Silhouette.html'>Game One</a></li>
+   </ul>
+   <center><img id = 'Nano' src = 'Nano.png' onclick = 'greet()'></center>
+   <center><span id = 'out1'></span></center><br><hr>
+   <center><input type = 'button' value = 'Guess the Silhouette' onclick = 'go()'></center><br>
+  </body>
+</html>

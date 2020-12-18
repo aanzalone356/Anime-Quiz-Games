@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel = "stylesheet" href = "main.css">
+    <meta charset="utf-8">
+    <title>Anime Knowledge site</title>
+    <script>
+    var score = 0;
+    var i = 0;
+      function go()
+      {
+        window.location.href = "index.html";
+      }
+      function greet()
+      {
+        document.getElementById('out').innerHTML = "<img id = 'Nano' src = 'Nano.png' onclick = 'greet()'>";
+        document.getElementById('out1').innerHTML = "This Game is pretty simply to understand.<br>What you want to do is try to identify the character by the outline.<br>頑張って";
+        setTimeout(hid,10000);
+      }
+      function hid()
+      {
+        document.getElementById('out1').innerHTML = ' ';
+      }
+      function fullHid()
+      {
+        document.getElementById('sb').style.visibility = 'hidden';
+      }
+      function Questions()
+      {
+        if(i === 0)
+        {
+          Quest1();
+          i++;
+        }
+        else if (i === 1)
+        {
+          Quest2();
+          i++;
+        }
+        else if (i === 2)
+        {
+          Quest3();
+          i++;
+        }
+        else if (i === 3)
+        {
+          Quest4();
+          i++;
+        }
+        else if (i === 4)
+        {
+          Quest5();
+          i++;
+        }
+        else
+        {
+          done();
+        }
+      }
+      function Quest1()
+      {
+        document.getElementById('out').innerHTML = "<img id = 'pic' src = 'Bulat.jpg'>"
+        document.getElementById('out1').innerHTML = "This Character is a Shonen character with a heavy baggage"
+        document.getElementById('out2').innerHTML = "<input type = 'button' value = 'Josuke' onclick = 'loss()'>"
+        document.getElementById('out3').innerHTML = "<input type = 'button' value = 'Kenpachi' onclick = 'loss()'>"
+        document.getElementById('out4').innerHTML = "<input type = 'button' value = 'Bulat' onclick = 'win()'>"
+        document.getElementById('out5').innerHTML = "<input type = 'button' value = 'Giorno' onclick = 'loss()'>"
+      }
+      function Quest2()
+      {
+        document.getElementById('out').innerHTML = "<img id = 'pic' src = 'Kanade.jpg'>"
+        document.getElementById('out1').innerHTML = "She is an angle with a heart of gold, and can fight with the best."
+        document.getElementById('out2').innerHTML = "<input type = 'button' value = 'Gabrial' onclick = 'loss()'>"
+        document.getElementById('out3').innerHTML = "<input type = 'button' value = 'Albeto' onclick = 'loss()'>"
+        document.getElementById('out4').innerHTML = "<input type = 'button' value = 'Sinon' onclick = 'loss()'>"
+        document.getElementById('out5').innerHTML = "<input type = 'button' value = 'Kanade' onclick = 'win()'>"
+      }
+      function Quest3()
+      {
+        document.getElementById('out').innerHTML = "<img id = 'pic' src = 'Thorfinn.png'>"
+        document.getElementById('out1').innerHTML = "Survive Said the Prophet"
+        document.getElementById('out2').innerHTML = "<input type = 'button' value = 'Guts' onclick = 'loss()'>"
+        document.getElementById('out3').innerHTML = "<input type = 'button' value = 'Gattes' onclick = 'loss()'>"
+        document.getElementById('out4').innerHTML = "<input type = 'button' value = 'Thorfinn' onclick = 'win()'>"
+        document.getElementById('out5').innerHTML = "<input type = 'button' value = 'Akame' onclick = 'loss()'>"
+      }
+      function Quest4()
+      {
+        document.getElementById('out').innerHTML = "<img id = 'pic' src = 'Mami.jpg'>"
+        document.getElementById('out1').innerHTML = "She's belongs to the streets no shipping for this item."
+        document.getElementById('out2').innerHTML = "<input type = 'button' value = 'Mami' onclick = 'win()'>"
+        document.getElementById('out3').innerHTML = "<input type = 'button' value = 'Myne' onclick = 'loss()'>"
+        document.getElementById('out4').innerHTML = "<input type = 'button' value = 'Chitoge' onclick = 'loss()'>"
+        document.getElementById('out5').innerHTML = "<input type = 'button' value = 'Chika' onclick = 'loss()'>"
+      }
+      function Quest5()
+      {
+        document.getElementById('out').innerHTML = "<img id = 'pic' src = 'hachiman.jpg'>"
+        document.getElementById('out1').innerHTML = "This Character is a Shonen character with a heavy baggage"
+        document.getElementById('out2').innerHTML = "<input type = 'button' value = 'Todoroki' onclick = 'loss()'>"
+        document.getElementById('out3').innerHTML = "<input type = 'button' value = 'Hachiman' onclick = 'win()'>"
+        document.getElementById('out4').innerHTML = "<input type = 'button' value = 'Rentaro' onclick = 'loss()'>"
+        document.getElementById('out5').innerHTML = "<input type = 'button' value = 'Rin' onclick = 'loss()'>"
+      }
+      function win()
+      {
+        score++;
+        Questions();
+      }
+      function loss()
+      {
+        Questions();
+      }
+      function done()
+      {
+        document.getElementById('out').innerHTML = "<img id = 'Nano' src = 'Nano.png'>"
+        document.getElementById('out1').innerHTML = "Congrats you got " + score + " correct! すごい仕事";
+        document.getElementById('out2').innerHTML = "<input type = 'button' value = 'reset' onclick = 'reset()'>"
+        document.getElementById('out3').innerHTML = ""
+        document.getElementById('out4').innerHTML = ""
+        document.getElementById('out5').innerHTML = ""
+      }
+      function start()
+      {
+        document.getElementById('out2').style.visibility = 'visible';
+        score = 0;
+        i = 0;
+        fullHid();
+        Questions();
+      }
+      function reset()
+      {
+        document.getElementById('out1').innerHTML = "アラアラ, you decided to play again hopefully you do great!";
+        document.getElementById('sb').style.visibility = 'visible';
+        document.getElementById('out2').style.visibility = 'hidden';
+      }
+    </script>
+  </head>
+  <body onload = 'greet()'>
+    <h1>Guess the Character Silhouette</h1>
+    <ul id = 'sideBar'>
+      <li><a href = 'index.html'>Home Page</a></li>
+      <li><a href = 'Silhouette.html'>Game One</a></li>
+   </ul>
+   <center><span id = 'out'></span></center>
+   <center><span id = 'out1'></span></center><br>
+   <center><input id = 'sb' type = 'button' value = 'Start' onclick = 'start()'></center><br>
+   <center><span id = 'out2'></span><span id = 'out3'></span><span id = 'out4'></span><span id = 'out5'></span></center><br><br><hr>
+   <center><input type = 'button' value = 'Home' onclick = 'go()'></center>
+  </body>
+</html>

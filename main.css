@@ -1,0 +1,42 @@
+body{
+  background-image: url(House.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+#sideBar{
+  font-size: 25px;
+  height: 100%;
+  height: 100%;
+  width: 200px;
+  z-index: -999;
+  float: right;
+  background-color: tan;
+  list-style: none;
+}
+#sideBar li{
+  text-decoration: none;
+  padding: 20 10;
+  height: 100%;
+}
+#sideBar li a{
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  color: blue;
+}
+#sideBar li:hover a:hover{
+  color: black;
+}
+#Nano{
+  z-index: -500;
+  height: 400px;
+}
+#out1P{
+  z-index: -500;
+}
+#out2{padding-right: 50px;}
+#out3{padding-right: 50px;}
+#out4{padding-right: 50px;}
+#out5{padding-right: 50px;}
+#pic{height: 400px;}
